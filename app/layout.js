@@ -9,9 +9,38 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400" });
 const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"], weight: ["400", "700"] });
 
+const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Rex","jobTitle":"Graphic Designer & Front-end Developer","url":"https://portfolio-rex.vercel.app","inLanguage":"en"}};
+
 export const metadata = {
+  metadataBase: new URL("https://portfolio-rex.vercel.app"),
   title: "Rex — Graphic Designer & Front-end Dev",
-  description: "Portfolio of Rex: bold, high-contrast neo-brutalist design & development.",
+  description: "Portfolio of Rex: bold, high-contrast neo-brutalist graphic design & front-end development.",
+  applicationName: "Rex",
+  keywords: ["graphic designer", "front-end developer", "neo-brutalism", "portfolio", "bold design"],
+  authors: [{ name: "Rex" }],
+  creator: "Rex",
+  publisher: "Rex",
+  alternates: { canonical: "https://portfolio-rex.vercel.app" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://portfolio-rex.vercel.app",
+    siteName: "Rex",
+    title: "Rex — Graphic Designer & Front-end Dev",
+    description: "Portfolio of Rex: bold, high-contrast neo-brutalist graphic design & front-end development.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Rex — Graphic Designer & Front-end Dev" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rex — Graphic Designer & Front-end Dev",
+    description: "Portfolio of Rex: bold, high-contrast neo-brutalist graphic design & front-end development.",
+    images: ["/og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +53,8 @@ export default function RootLayout({ children }) {
           <Footer />
           <ThemeToggle />
         </ThemeProvider>
-      </body>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        </body>
     </html>
   );
 }
