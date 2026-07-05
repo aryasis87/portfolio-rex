@@ -13,7 +13,7 @@ export default function BlogPage() {
         <div className="mx-auto grid max-w-6xl gap-5">
           {posts.map((p, i) => (
             <Reveal key={p.title} delay={(i % 3) * 0.08}>
-              <a href="#" className="nb nb-hover group flex flex-col justify-between gap-4 bg-white p-6 sm:flex-row sm:items-center md:p-7">
+              <a href="/contact" className="nb nb-hover group flex flex-col justify-between gap-4 bg-white p-6 sm:flex-row sm:items-center md:p-7">
                 <div className="max-w-2xl">
                   <div className="mb-2 flex items-center gap-3 text-xs font-bold uppercase text-black/50">
                     <span className="nb bg-lime-300 px-2 py-0.5">{p.category}</span>

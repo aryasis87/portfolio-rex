@@ -26,7 +26,7 @@ export default function WorkPage() {
           <motion.div layout className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <AnimatePresence mode="popLayout">
               {list.map((p) => (
-                <motion.a key={p.title} href="#" layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.3 }} className="nb nb-hover group block bg-white">
+                <motion.a key={p.title} href="/contact" layout initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.96 }} transition={{ duration: 0.3 }} className="nb nb-hover group block bg-white">
                   <div className="relative h-56 w-full overflow-hidden border-b-2 border-black">
                     <Image src={p.image} alt={p.title} fill sizes="(max-width:640px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
                     <span className="nb absolute left-3 top-3 bg-lime-300 px-2 py-0.5 text-xs font-black uppercase">{p.category}</span>
