@@ -9,10 +9,10 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400" });
 const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"], weight: ["400", "700"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Rex","jobTitle":"Graphic Designer & Front-end Developer","url":"https://portfolio-rex.vercel.app","inLanguage":"en"}};
+const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Rex","jobTitle":"Graphic Designer & Front-end Developer","url":"https://rex.pintuweb.com","inLanguage":"en"}};
 
 export const metadata = {
-  metadataBase: new URL("https://portfolio-rex.vercel.app"),
+  metadataBase: new URL("https://rex.pintuweb.com"),
   title: "Rex — Graphic Designer & Front-end Dev",
   description: "Portfolio of Rex: bold, high-contrast neo-brutalist graphic design & front-end development.",
   applicationName: "Rex",
@@ -20,11 +20,11 @@ export const metadata = {
   authors: [{ name: "Rex" }],
   creator: "Rex",
   publisher: "Rex",
-  alternates: { canonical: "https://portfolio-rex.vercel.app" },
+  alternates: { canonical: "https://rex.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-rex.vercel.app",
+    url: "https://rex.pintuweb.com",
     siteName: "Rex",
     title: "Rex — Graphic Designer & Front-end Dev",
     description: "Portfolio of Rex: bold, high-contrast neo-brutalist graphic design & front-end development.",
