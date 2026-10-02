@@ -16,7 +16,7 @@ Persona fiktif Rex, desainer grafis yang juga menulis kode. Neo-brutalis: garis 
 
 - **6 studi kasus** (`/work/[slug]`): tantangan, yang dikerjakan, hasil, dan tautan ke situs live-nya.
 - **3 artikel** (`/blog/[slug]`) tentang keputusan desain di proyek-proyek tersebut.
-- Statistik beranda dihitung dari isi situs (jumlah proyek, layanan, artikel).
+- Angka yang tampil (jumlah proyek, layanan, artikel) dihitung dari isi situs; lama berkarya adalah bagian dari persona fiktif. Tidak ada klaim jumlah klien atau tingkat kepuasan.
 - Halaman 404 bergaya sendiri, judul halaman berpola `Halaman — Rex`, dan sitemap memuat setiap studi kasus dan artikel.
 
 | Studi kasus | Demo live |
