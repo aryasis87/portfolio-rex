@@ -43,17 +43,33 @@ body {
 
 :focus-visible { outline: 3px solid #0a0a0a; outline-offset: 2px; }
 
+/* Batas keterbacaan: label abu tetap >= 4.5:1 di atas putih, lime, dan hitam. */
+@layer utilities {
+  .text-black\/50 { color: rgb(0 0 0 / 0.64); }
+  .text-black\/40 { color: rgb(0 0 0 / 0.62); }
+  .text-white\/40 { color: rgb(255 255 255 / 0.62); }
+}
+
 /* ---- Dark theme (neon brutalist: light borders + lime hard-shadows) ---- */
 .dark { color-scheme: dark; }
 .dark body { background-color: #0c0c0a !important; color: #f4f4ee !important; }
 .dark .bg-white { background-color: #16160f !important; }
 .dark .bg-\[\#fdfcf4\] { background-color: #0c0c0a !important; }
 .dark .text-black { color: #f4f4ee !important; }
-.dark .text-black\/80 { color: rgba(244,244,238,0.8) !important; }
-.dark .text-black\/70 { color: rgba(244,244,238,0.7) !important; }
-.dark .text-black\/60 { color: rgba(244,244,238,0.6) !important; }
-.dark .text-black\/50 { color: rgba(244,244,238,0.5) !important; }
-.dark .text-black\/40 { color: rgba(244,244,238,0.4) !important; }
+.dark .text-black\/80 { color: rgba(244,244,238,0.82) !important; }
+.dark .text-black\/70 { color: rgba(244,244,238,0.76) !important; }
+.dark .text-black\/60 { color: rgba(244,244,238,0.72) !important; }
+.dark .text-black\/50 { color: rgba(244,244,238,0.68) !important; }
+.dark .text-black\/40 { color: rgba(244,244,238,0.64) !important; }
+/* Blok lime tetap lime di mode gelap, jadi teksnya harus tetap hitam. */
+.dark .bg-lime-300, .dark .bg-lime-300 .text-black { color: #0a0a0a !important; }
+.dark .bg-lime-300 .text-black\/80, .dark .bg-lime-300 .text-black\/70 { color: rgba(10,10,10,0.82) !important; }
+.dark .bg-lime-300 .text-black\/60, .dark .bg-lime-300 .text-black\/50 { color: rgba(10,10,10,0.76) !important; }
+.dark .bg-lime-300 .bg-white, .dark .bg-lime-300 .bg-white .text-black { color: #f4f4ee !important; }
+.dark .bg-lime-300 .bg-white .text-black\/80, .dark .bg-lime-300 .bg-white .text-black\/70 { color: rgba(244,244,238,0.8) !important; }
+.dark .bg-lime-300 .bg-white .text-black\/60, .dark .bg-lime-300 .bg-white .text-black\/50 { color: rgba(244,244,238,0.72) !important; }
+.dark .bg-lime-300 .border-black { border-color: #0a0a0a !important; }
+.dark .focus\:bg-lime-50:focus { background-color: #22220f !important; }
 .dark .text-black\/30 { color: rgba(244,244,238,0.3) !important; }
 .dark .text-black\/25 { color: rgba(244,244,238,0.25) !important; }
 .dark .border-black { border-color: #f4f4ee !important; }

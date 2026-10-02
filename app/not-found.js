@@ -1,19 +1,23 @@
-// app/not-found.js
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
+
+export const metadata = { title: 'Page not found' };
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white text-gray-800 font-sans">
-      <div className="text-center max-w-lg px-6 py-12">
-        <h1 className="text-6xl font-extrabold mb-4 text-gray-900">404</h1>
-        <p className="text-lg mb-6 text-gray-600">Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
-        <Link
-          href="/"
-          className="inline-block bg-gray-900 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-gray-800 transition duration-300"
-        >
-          Go Back Home
-        </Link>
-      </div>
-    </div>
+    <main>
+      <PageHeader kicker="Error 404" title="Off the grid." sub="This page doesn't exist, or it moved. Everything else is still loud and in place." />
+      <section className="px-6 py-16">
+        <div className="mx-auto flex max-w-6xl flex-wrap gap-4">
+          <Link href="/" className="nb nb-hover nb-press inline-flex items-center gap-2 bg-black px-5 py-3 font-mono text-sm font-bold uppercase text-lime-300">
+            <ArrowLeft size={16} aria-hidden="true" /> Back home
+          </Link>
+          <Link href="/work" className="nb nb-hover nb-press bg-white px-5 py-3 font-mono text-sm font-bold uppercase">
+            See the work
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

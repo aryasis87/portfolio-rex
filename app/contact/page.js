@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Check } from 'lucide-react';
+import { Mail, MapPin, Check } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import { profile } from '@/lib/data';
 
@@ -18,16 +18,12 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1fr_1.2fr]">
           <div className="space-y-5">
             <Info icon={Mail} label="Email" value={profile.email} href={`mailto:${profile.email}`} />
-            <Info icon={Phone} label="Phone" value={profile.phone} href={`tel:${profile.phone.replace(/\s/g, '')}`} />
             <Info icon={MapPin} label="Location" value={profile.location} />
             <div className="nb bg-lime-300 p-5">
               <span className="flex items-center gap-2 text-sm font-black uppercase">
                 <span className="h-2.5 w-2.5 rounded-full bg-black" /> Available for work
               </span>
               <p className="mt-2 text-sm font-semibold text-black/70">Booking projects for next quarter.</p>
-            </div>
-            <div className="flex flex-wrap gap-4 pt-1">
-              {profile.socials.map((s) => <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm font-black uppercase underline-offset-4 hover:underline">{s.label}</a>)}
             </div>
           </div>
           <div>

@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/ui/Reveal';
 import { profile, skills, experience, education } from '@/lib/data';
 
-export const metadata = { title: 'About — Rex' };
+export const metadata = { title: 'About' };
 
 export default function AboutPage() {
   return (
@@ -17,7 +17,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="nb-lg bg-white p-2">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <Image src={profile.avatar} alt={profile.name} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover grayscale contrast-125" />
+                <Image src={profile.about} alt="" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover grayscale contrast-125" />
               </div>
             </div>
           </Reveal>

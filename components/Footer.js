@@ -25,10 +25,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-sm font-black uppercase tracking-widest text-white/40">Elsewhere</p>
-            <ul className="mt-3 space-y-2">
-              {profile.socials.map((s) => <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm font-bold uppercase text-white/70 transition hover:text-lime-300">{s.label}</a></li>)}
-            </ul>
+            <p className="text-sm font-black uppercase tracking-widest text-white/40">About this site</p>
+            <p className="mt-3 text-sm opacity-80">A portfolio template with a fictional persona. Every project links to a live demo site; there are no real clients or testimonials here.</p>
           </div>
         </div>
 
